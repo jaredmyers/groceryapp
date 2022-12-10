@@ -10,4 +10,4 @@ Microservice architecture consisting of React, GoLang, Python, MySQL, MongoDB, R
 * Graph Service: GoLang, generating shortest path to products in grocery store. 
 * Meal Generation Service: GoLang, meal generator based on caloric inputs.
 
-![v1](microservice_projectv1.png)
+![v1](images/microservice_projectv1.png)
