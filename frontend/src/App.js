@@ -1,24 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { useState, useEffect } from 'react'
+import { Typography, AppBar, Toolbar, Container, CssBaseline, Box} from '@mui/material';
+import { Card, CardActions, CardContent, CardMedia, Grid } from '@mui/material';
+import Header from './components/Header';
+import { DataGrid } from '@mui/x-data-grid'
+import DataTable from './components/DataTable'
+
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+	  <>
+	  <CssBaseline />
+	  <Header />
+
+	  <Container maxWidth="md" style={{ marginTop: '100px' }}>
+	     <Typography variant="h3" align="center" color="textPrimary" gutterBottom>Select List Items</Typography>
+	  <DataTable />
+	  </Container>
+
+	  <main> 
+	   <div>
+	    <Container maxWidth="md" style={{ marginTop: '100px'}}>
+	     <Typography variant="h5" align="center" color="textSecondary" paragraph>
+	  This is a test paragraph. This is for testing the test with all the more testing just to see how this will look.</Typography>
+
+	     <div>
+	  <Container maxWidth="md">
+	      <Grid container spacing={4}>
+	       <Grid item>
+	  	<Card sx={{ minWidth:275 }}>
+	  	<CardContent>
+	  	  <Typography>testing</Typography>
+	   	</CardContent>
+	        </Card>
+	       </Grid>
+	      </Grid>
+	      <Grid container spacing={4}>
+	       <Grid item>
+	  	<Card>
+	  	<CardContent>
+	  	  <Typography>testing</Typography>
+	   	</CardContent>
+	        </Card>
+	       </Grid>
+	      </Grid>
+	  </Container>
+	     </div>
+
+	    </Container>
+	   </div>
+	  </main>
+
+	  </>
   );
 }
 
