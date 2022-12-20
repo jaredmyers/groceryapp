@@ -1,8 +1,7 @@
 import React from 'react'
 import { Box, Button, Stack, Skeleton } from '@mui/material'
 import { DataGrid } from '@mui/x-data-grid'
-import { useState, useEffect } from 'react'
-
+import { useState, useEffect, useRef } from 'react'
 import axios from 'axios';
 
 
@@ -47,8 +46,7 @@ const DataTable = () => {
 	const [loading, setLoading] = useState(true);
 	const [selectedRows, setSelectedRows] = useState([]);
 
-	getItems(setTableData)	
-	/*
+	//getItems(setTableData)	
 	useEffect(() => {
 		//fetch("https://jsonplaceholder.typicode.com/posts")
 		fetch("http://localhost:8000/test")
@@ -59,8 +57,7 @@ const DataTable = () => {
 			setTableData(data)
 			setLoading(false)
 		})
-	});
-	*/
+	}, []);
 	return (
 		<div style={{height:650, width: '100%'}}>
 		<DataGrid 
