@@ -15,8 +15,8 @@ function App() {
 	  <CssBaseline />
 	  <Header />
 
-	  <Container maxWidth="md" style={{ marginTop: '100px' }}>
-	     <Typography variant="h3" align="center" color="textPrimary" gutterBottom>Select List Items</Typography>
+	  <Container maxWidth="sm" style={{ marginTop: '100px' }}>
+	     <Typography variant="h3" align="center" color="textPrimary" gutterBottom>Create Grocery List</Typography>
 	  <DataTable />
 	  </Container>
 

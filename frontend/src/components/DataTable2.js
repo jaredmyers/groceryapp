@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Button, Stack, Skeleton } from '@mui/material'
 import { DataGrid } from '@mui/x-data-grid'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect} from 'react'
 import axios from 'axios';
 
 
@@ -11,17 +11,10 @@ const columns = [
 	{field: 'body', headerName: 'Body', width:300}
 ]
 
-const testcolumns = [
-	{field: 'id', headerName: 'ID'},
-	{field: 'item', headerName: 'Item', width:200}
-]
-
-var selection;
-
-
 function useGetAllData(setTableData){
 	useEffect(() => {
-		var url = "http://localhost:8000/test"
+		//var url = "http://localhost:8000/test"
+		var url = "https://jsonplaceholder.typicode.com/posts"
 		axios.get(url, {
 			responseType: 'json'
 		}).then(response => {
@@ -31,32 +24,6 @@ function useGetAllData(setTableData){
 			}
 		})
 	}, [])
-}
-
-
-function processList(selection){
-	
-	var selectionJSON = JSON.stringify(selection)
-	alert(typeof selectionJSON)
-	console.log(selectionJSON)
-	var url = "http://localhost:8000/add"
-	axios.post(url, {
-		"selections": selection
-	}).then(response => {
-		if(response.status == 200){
-			alert("list processed")
-		}
-	})
-
-}
-
-function manageChecks(itm){
-	selection = itm;
-	console.log(selection)
-}
-
-function saveList(){
-
 }
 
 
@@ -72,11 +39,11 @@ const LoadingSkeleton = () => (
 	</Box>
 );
 
-const DataTable = () => {
+const DataTable2 = () => {
 	const [tableData, setTableData] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [selectedRows, setSelectedRows] = useState([]);
-	
+
 	useGetAllData(setTableData)	
 	/*
 	useEffect(() => {
@@ -95,21 +62,19 @@ const DataTable = () => {
 		<div style={{height:650, width: '100%'}}>
 		<DataGrid 
 			rows={tableData}
-			columns={testcolumns}
+			columns={columns}
 			pageSize={10}
 			rowsPerPageOptions={[10]}
 			checkboxSelection
 			components={{LoadingOverlay: LoadingSkeleton}}
 			loading={false}
-			onSelectionModelChange={itm => manageChecks(itm)}
 		/>
 		<Stack spacing={2} direction="row" style={{ marginTop: '10px'}}>
 	  	<Button variant="contained">Save</Button>
-	  	<Button variant="contained"
-			onClick={() => {processList(selection);}}>Process List</Button>
+	  	<Button variant="contained">Process List</Button>
 		</Stack>
 		</div>
 	);
 }
 
-export default DataTable
+export default DataTable2
