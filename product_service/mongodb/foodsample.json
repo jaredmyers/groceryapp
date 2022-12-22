@@ -1,0 +1,323 @@
+{
+	"name": "Cinnamon Raisen Bagels",
+	"price": "2.69",
+	"nutrition": [
+		{"calories": 150},
+		{"servings": 6},
+		{"servingsize": 1},
+		{"servingsizeunit": "item"},
+		{"fat": 1},
+		{"cholestrol": 0},
+		{"sodium": 170},
+		{"totalcarb": 48},
+		{"fiber": 2},
+		{"sugars": 7},
+		{"protien": 9}
+	],
+	"store": "Traders",
+	"location": "D10"
+}
+{
+	"name": "Habanero Lime Tortillas",
+	"price": "3.69",
+	"nutrition": [
+		{"calories": 150},
+		{"servings": 10},
+		{"servingsize": 1},
+		{"servingsizeunit": ""},
+		{"fat": 3.5},
+		{"cholestrol": 0},
+		{"sodium": 210},
+		{"totalcarb": 24},
+		{"fiber": 1},
+		{"sugars": 0},
+		{"protien": 4}
+	],
+	"store": "Traders",
+	"location": "A05"
+}
+{
+	"name": "Organic Chicken Breast",
+	"price": "4.69",
+	"nutrition": [
+		{"calories": 150},
+		{"servings": 4},
+		{"servingsize": 4},
+		{"servingsizeunit": ""},
+		{"fat": 3},
+		{"cholestrol": 70},
+		{"sodium": 70},
+		{"totalcarb": 0},
+		{"fiber": 0},
+		{"sugars": 0},
+		{"protien": 24}
+	],
+	"store": "Traders",
+	"location": "J23"
+}
+{
+	"name": "Mixed Berry Blend",
+	"price": "4.69",
+	"nutrition": [
+		{"calories": 150},
+		{"servings": 2.5},
+		{"servingsize": 1},
+		{"servingsizeunit": ""},
+		{"fat": 0.5},
+		{"cholestrol": 0},
+		{"sodium": 0},
+		{"totalcarb": 18},
+		{"fiber": 6},
+		{"sugars": 11},
+		{"protien": 1}
+	],
+	"store": "Traders",
+	"location": "L03"
+}
+{
+	"name": "Petite Pees",
+	"price": "1.69",
+	"nutrition": [
+		{"calories": 150},
+		{"servings": 6},
+		{"servingsize": 0.66},
+		{"servingsizeunit": ""},
+		{"fat": 0},
+		{"cholestrol": 0},
+		{"sodium": 60},
+		{"totalcarb": 11},
+		{"fiber": 4},
+		{"sugars": 4},
+		{"protien": 4}
+	],
+	"store": "Traders",
+	"location": "F00"
+}
+{
+	"name": "White Quinoa",
+	"price": "1.30",
+	"nutrition": [
+		{"calories": 150},
+		{"servings": 11},
+		{"servingsize": 0.25},
+		{"servingsizeunit": ""},
+		{"fat": 2.5},
+		{"cholestrol": 0},
+		{"sodium": 0},
+		{"totalcarb": 27},
+		{"fiber": 3},
+		{"sugars": 1},
+		{"protien": 6}
+	],
+	"store": "Traders",
+	"location": "D04"
+}
+{
+	"name": "Peanut Butter Cups",
+	"price": "0.99",
+	"nutrition": [
+		{"calories": 190},
+		{"servings": 3},
+		{"servingsize": 3},
+		{"servingsizeunit": ""},
+		{"fat": 12},
+		{"cholestrol": 0},
+		{"sodium": 100},
+		{"totalcarb": 18},
+		{"fiber": 1},
+		{"sugars": 15},
+		{"protien": 3}
+	],
+	"store": "Traders",
+	"location": "D04"
+}
+{
+	"name": "Maple Agave Blend",
+	"price": "1.99",
+	"nutrition": [
+		{"calories": 110},
+		{"servings": 8},
+		{"servingsize": 2},
+		{"servingsizeunit": ""},
+		{"fat": 0},
+		{"cholestrol": 0},
+		{"sodium": 0},
+		{"totalcarb": 27},
+		{"fiber": 0},
+		{"sugars": 27},
+		{"protien": 0}
+	],
+	"store": "Traders",
+	"location": "D04"
+}
+{
+	"name": "Sweet Mini Peppers",
+	"price": "1.89",
+	"nutrition": [
+		{"calories": 25},
+		{"servings": 10},
+		{"servingsize": 3},
+		{"servingsizeunit": ""},
+		{"fat": 0},
+		{"cholestrol": 0},
+		{"sodium": 0},
+		{"totalcarb": 5},
+		{"fiber": 1},
+		{"sugars": 3},
+		{"protien": 1}
+	],
+	"store": "Traders",
+	"location": "D08"
+}
+{
+	"name": "Penne Rigate",
+	"price": "1.89",
+	"nutrition": [
+		{"calories": 210},
+		{"servings": 8},
+		{"servingsize": 0.66},
+		{"servingsizeunit": ""},
+		{"fat": 1},
+		{"cholestrol": 0},
+		{"sodium": 0},
+		{"totalcarb": 44},
+		{"fiber": 2},
+		{"sugars": 2},
+		{"protien": 7}
+	],
+	"store": "Traders",
+	"location": "L08"
+}
+{
+	"name": "Chopped Vegetable Mix",
+	"price": "1.89",
+	"nutrition": [
+		{"calories": 25},
+		{"servings": 5},
+		{"servingsize": 1},
+		{"servingsizeunit": ""},
+		{"fat": 0},
+		{"cholestrol": 0},
+		{"sodium": 45},
+		{"totalcarb": 6},
+		{"fiber": 2},
+		{"sugars": 3},
+		{"protien": 1}
+	],
+	"store": "Traders",
+	"location": "A08"
+}
+{
+	"name": "Sliced Black Olives",
+	"price": "0.89",
+	"nutrition": [
+		{"calories": 20},
+		{"servings": 7},
+		{"servingsize": 2},
+		{"servingsizeunit": ""},
+		{"fat": 1.5},
+		{"cholestrol": 0},
+		{"sodium": 140},
+		{"totalcarb": 1},
+		{"fiber": 1},
+		{"sugars": 0},
+		{"protien": 0}
+	],
+	"store": "Traders",
+	"location": "F06"
+}
+{
+	"name": "Light Cream Cheese",
+	"price": "1.89",
+	"nutrition": [
+		{"calories": 70},
+		{"servings": 11},
+		{"servingsize": 2},
+		{"servingsizeunit": ""},
+		{"fat": 4.5},
+		{"cholestrol": 15},
+		{"sodium": 95},
+		{"totalcarb": 5},
+		{"fiber": 0},
+		{"sugars": 4},
+		{"protien": 3}
+	],
+	"store": "Traders",
+	"location": "J01"
+}
+{
+	"name": "Vegetable Broth",
+	"price": "1.89",
+	"nutrition": [
+		{"calories": 20},
+		{"servings": 4},
+		{"servingsize": 1},
+		{"servingsizeunit": ""},
+		{"fat": 0},
+		{"cholestrol": 0},
+		{"sodium": 115},
+		{"totalcarb": 5},
+		{"fiber": 2},
+		{"sugars": 3},
+		{"protien": 0}
+	],
+	"store": "Traders",
+	"location": "I01"
+}
+{
+	"name": "Crumbled Feta",
+	"price": "2.89",
+	"nutrition": [
+		{"calories": 70},
+		{"servings": 6},
+		{"servingsize": 2},
+		{"servingsizeunit": ""},
+		{"fat": 4},
+		{"cholestrol": 15},
+		{"sodium": 340},
+		{"totalcarb": 2},
+		{"fiber": 0},
+		{"sugars": 1},
+		{"protien": 6}
+	],
+	"store": "Traders",
+	"location": "I08"
+}
+{
+	"name": "Whole Milk",
+	"price": "2.89",
+	"nutrition": [
+		{"calories": 150},
+		{"servings": 4},
+		{"servingsize": 1},
+		{"servingsizeunit": ""},
+		{"fat": 8},
+		{"cholestrol": 35},
+		{"sodium": 125},
+		{"totalcarb": 12},
+		{"fiber": 0},
+		{"sugars": 12},
+		{"protien": 8}
+	],
+	"store": "Traders",
+	"location": "L00"
+}
+{
+	"name": "Greek Yogurt",
+	"price": "2.89",
+	"nutrition": [
+		{"calories": 550},
+		{"servings": 2.5},
+		{"servingsize": 0.75},
+		{"servingsizeunit": ""},
+		{"fat": 16},
+		{"cholestrol": 50},
+		{"sodium": 75},
+		{"totalcarb": 30},
+		{"fiber": 3},
+		{"sugars": 23},
+		{"protien": 7}
+	],
+	"store": "Traders",
+	"location": "L07"
+}

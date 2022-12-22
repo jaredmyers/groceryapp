@@ -37,8 +37,6 @@ function useGetAllData(setTableData){
 function processList(selection){
 	
 	var selectionJSON = JSON.stringify(selection)
-	alert(typeof selectionJSON)
-	console.log(selectionJSON)
 	var url = "http://localhost:8000/add"
 	axios.post(url, {
 		"selections": selection
