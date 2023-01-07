@@ -67,7 +67,7 @@ func getTestInfo(context *gin.Context) {
 func addTestInfo(context *gin.Context) {
 
 	if err := context.BindJSON(&newAdd); err != nil {
-		log.Print(err)
+		log.Println(err)
 		return
 	}
 

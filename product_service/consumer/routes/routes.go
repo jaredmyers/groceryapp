@@ -9,6 +9,7 @@ import (
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 type ProductService struct {
@@ -26,7 +27,10 @@ func NewProductService(ctx context.Context, productCollection *mongo.Collection)
 func (s *ProductService) GetProducts() ([]*models.Products, error) {
 	log.Println("product service getproducts is running")
 	var products []*models.Products
-	cursor, err := s.productCollection.Find(s.ctx, bson.D{})
+
+	filter := bson.D{}
+	opts := options.Find().SetSort(bson.D{{"id", 1}})
+	cursor, err := s.productCollection.Find(s.ctx, filter, opts)
 	if err != nil {
 		return nil, err
 	}
