@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 
+	routes "github.com/jaredmyers/groceryapp/product_service/consumer/routes"
 	"github.com/segmentio/kafka-go"
 )
 
@@ -45,6 +46,7 @@ func readFromKafka() {
 	for {
 		m, err := r.ReadMessage(context.Background())
 		if err != nil {
+			log.Println(err)
 			break
 		}
 		fmt.Printf("%T\n", m.Value)
@@ -59,12 +61,39 @@ func readFromKafka() {
 }
 
 func getData() []byte {
-	jtestInfo, err := json.Marshal(testInfo)
+
+	ctx, client := routes.DatabaseInstance()
+	defer client.Disconnect(ctx)
+	ps := routes.NewProductService(ctx, client.Database("product_service").Collection("products"))
+
+	products, err := ps.GetProducts()
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
 	}
 
-	return jtestInfo
+	log.Println("THIS IS PRODUCTS")
+	log.Println(products)
+	log.Printf("%T", products)
+	for item := range products {
+		log.Printf("%T, %v", item, item)
+	}
+
+	//ttt := &models.GroceryListPage{}
+
+	jtestProducts, err := json.Marshal(products)
+	if err != nil {
+		log.Println(err)
+	}
+	log.Println(string(jtestProducts))
+
+	//jtestInfo, err := json.Marshal(testInfo)
+	//if err != nil {
+	//	log.Fatal(err)
+	//}
+	//log.Println(string(jtestInfo))
+
+	//return jtestInfo
+	return jtestProducts
 }
 
 func writeToKafka(topic string, content []byte) {

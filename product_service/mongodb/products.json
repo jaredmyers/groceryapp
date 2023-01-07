@@ -1,4 +1,5 @@
 {
+    "id": 1,
 	"name": "Cinnamon Raisen Bagels",
 	"price": "2.69",
 	"nutrition": [
@@ -18,6 +19,7 @@
 	"location": "D10"
 }
 {
+    "id": 2,
 	"name": "Habanero Lime Tortillas",
 	"price": "3.69",
 	"nutrition": [
@@ -37,6 +39,7 @@
 	"location": "A05"
 }
 {
+    "id": 3,
 	"name": "Organic Chicken Breast",
 	"price": "4.69",
 	"nutrition": [
@@ -56,6 +59,7 @@
 	"location": "J23"
 }
 {
+    "id": 4,
 	"name": "Mixed Berry Blend",
 	"price": "4.69",
 	"nutrition": [
@@ -75,6 +79,7 @@
 	"location": "L03"
 }
 {
+    "id": 5,
 	"name": "Petite Pees",
 	"price": "1.69",
 	"nutrition": [
@@ -94,6 +99,7 @@
 	"location": "F00"
 }
 {
+    "id": 6,
 	"name": "White Quinoa",
 	"price": "1.30",
 	"nutrition": [
@@ -113,6 +119,7 @@
 	"location": "D04"
 }
 {
+    "id": 7,
 	"name": "Peanut Butter Cups",
 	"price": "0.99",
 	"nutrition": [
@@ -132,6 +139,7 @@
 	"location": "D04"
 }
 {
+    "id": 8,
 	"name": "Maple Agave Blend",
 	"price": "1.99",
 	"nutrition": [
@@ -151,6 +159,7 @@
 	"location": "D04"
 }
 {
+    "id": 9,
 	"name": "Sweet Mini Peppers",
 	"price": "1.89",
 	"nutrition": [
@@ -170,6 +179,7 @@
 	"location": "D08"
 }
 {
+    "id": 10,
 	"name": "Penne Rigate",
 	"price": "1.89",
 	"nutrition": [
@@ -189,6 +199,7 @@
 	"location": "L08"
 }
 {
+    "id": 11,
 	"name": "Chopped Vegetable Mix",
 	"price": "1.89",
 	"nutrition": [
@@ -208,6 +219,7 @@
 	"location": "A08"
 }
 {
+    "id": 12,
 	"name": "Sliced Black Olives",
 	"price": "0.89",
 	"nutrition": [
@@ -227,6 +239,7 @@
 	"location": "F06"
 }
 {
+    "id": 13,
 	"name": "Light Cream Cheese",
 	"price": "1.89",
 	"nutrition": [
@@ -246,6 +259,7 @@
 	"location": "J01"
 }
 {
+    "id": 14,
 	"name": "Vegetable Broth",
 	"price": "1.89",
 	"nutrition": [
@@ -265,6 +279,7 @@
 	"location": "I01"
 }
 {
+    "id": 15,
 	"name": "Crumbled Feta",
 	"price": "2.89",
 	"nutrition": [
@@ -284,6 +299,7 @@
 	"location": "I08"
 }
 {
+    "id": 16,
 	"name": "Whole Milk",
 	"price": "2.89",
 	"nutrition": [
@@ -303,6 +319,7 @@
 	"location": "L00"
 }
 {
+    "id": 17,
 	"name": "Greek Yogurt",
 	"price": "2.89",
 	"nutrition": [
