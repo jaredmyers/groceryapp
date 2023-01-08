@@ -19,7 +19,7 @@ const testcolumns = [
 var selection;
 
 
-function useGetAllData(setTableData){
+function useGetAllData(setTableData, setLoading){
 	useEffect(() => {
 		var url = "http://localhost:8000/test"
 		axios.get(url, {
@@ -27,6 +27,7 @@ function useGetAllData(setTableData){
 		}).then(response => {
 			if(response.status == 200){
 				setTableData(response.data)
+				setLoading(false)
 				console.log(response.data)
 			}
 		})
@@ -41,8 +42,8 @@ function processList(selection){
 	axios.post(url, {
 		"selections": selection
 	}).then(response => {
-		if(response.status == 200){
-			alert("list processed")
+		if(response.status == 200 || response.status == 201){
+			alert("List Processed!")
 		}
 	})
 
@@ -64,8 +65,14 @@ const LoadingSkeleton = () => (
 		height: "max-content"
 	  }}
 	>
-	{[...Array(10)].map((_) => (
-		<Skeleton variant="rectangular" height={45} sx= {{my:1, mx:0}}/>
+/*
+    {[Array.from({length: 10}, (v, i) => (
+		<Skeleton key={i} variant="rectangular" height={45} sx= {{my:1, mx:0}}/>
+	))]}
+		*/
+ 
+	{[...Array(10)].map((v, i) => (
+		<Skeleton key={i} variant="rectangular" height={45} sx= {{my:1, mx:0}}/>
 	))}
 	</Box>
 );
@@ -75,7 +82,7 @@ const DataTable = () => {
 	const [loading, setLoading] = useState(true);
 	const [selectedRows, setSelectedRows] = useState([]);
 	
-	useGetAllData(setTableData)	
+	useGetAllData(setTableData, setLoading)	
 	/*
 	useEffect(() => {
 		//fetch("https://jsonplaceholder.typicode.com/posts")
@@ -98,7 +105,7 @@ const DataTable = () => {
 			rowsPerPageOptions={[10]}
 			checkboxSelection
 			components={{LoadingOverlay: LoadingSkeleton}}
-			loading={false}
+			loading={loading}
 			onSelectionModelChange={itm => manageChecks(itm)}
 		/>
 		<Stack spacing={2} direction="row" style={{ marginTop: '10px'}}>

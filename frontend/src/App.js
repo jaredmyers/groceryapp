@@ -20,39 +20,6 @@ function App() {
 	  <DataTable />
 	  </Container>
 
-	  <main> 
-	   <div>
-	    <Container maxWidth="md" style={{ marginTop: '100px'}}>
-	     <Typography variant="h5" align="center" color="textSecondary" paragraph>
-	  This is a test paragraph. This is for testing the test with all the more testing just to see how this will look.</Typography>
-
-	     <div>
-	  <Container maxWidth="md">
-	      <Grid container spacing={4}>
-	       <Grid item>
-	  	<Card sx={{ minWidth:275 }}>
-	  	<CardContent>
-	  	  <Typography>testing</Typography>
-	   	</CardContent>
-	        </Card>
-	       </Grid>
-	      </Grid>
-	      <Grid container spacing={4}>
-	       <Grid item>
-	  	<Card>
-	  	<CardContent>
-	  	  <Typography>testing</Typography>
-	   	</CardContent>
-	        </Card>
-	       </Grid>
-	      </Grid>
-	  </Container>
-	     </div>
-
-	    </Container>
-	   </div>
-	  </main>
-
 	  </>
   );
 }

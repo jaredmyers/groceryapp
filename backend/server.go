@@ -14,7 +14,7 @@ import (
 	"github.com/segmentio/kafka-go"
 )
 
-type info struct {
+type groceryPageProduct struct {
 	ID   int    `json:"id"`
 	Item string `json:"item"`
 }
@@ -25,7 +25,7 @@ type addTest struct {
 
 var newAdd addTest
 
-var testInfo = []info{
+var testInfo = []groceryPageProduct{
 	{ID: 1, Item: "Raisin Bagel"},
 	{ID: 2, Item: "Milk"},
 	{ID: 3, Item: "Waffles"},
@@ -53,15 +53,15 @@ func getTestAdd(context *gin.Context) {
 func getTestInfo(context *gin.Context) {
 
 	triggerKafkaEvent("products")
-	products := readFromKafka("test")
+	productsFromDb := readFromKafka("test")
 
-	p := []info{}
+	products := []groceryPageProduct{}
 
-	err := json.Unmarshal(products, &p)
+	err := json.Unmarshal(productsFromDb, &products)
 	if err != nil {
 		log.Panic(err)
 	}
-	context.IndentedJSON(http.StatusOK, p)
+	context.IndentedJSON(http.StatusOK, products)
 	//context.IndentedJSON(http.StatusOK, testInfo)
 }
 func addTestInfo(context *gin.Context) {
@@ -94,11 +94,9 @@ func readFromKafka(topic string) []byte {
 	log.Println(m.Value)
 
 	return m.Value
-
 }
 
 func triggerKafkaEvent(topic string) {
-
 	w := &kafka.Writer{
 		Addr:                   kafka.TCP("localhost:9092"),
 		Topic:                  topic,
