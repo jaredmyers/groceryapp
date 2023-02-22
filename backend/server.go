@@ -36,7 +36,7 @@ var testInfo = []groceryPageProduct{
 	{ID: 8, Item: "Hummus"},
 }
 
-func main() {
+func notmain() {
 	router := gin.New()
 	router.Use(gin.Logger())
 	router.Use(cors.Default())
@@ -77,7 +77,7 @@ func addTestInfo(context *gin.Context) {
 
 func readFromKafka(topic string) []byte {
 	conf := kafka.ReaderConfig{
-		Brokers:     []string{"localhost:9092"},
+		Brokers:     []string{"172.19.255.200:9092"},
 		Topic:       topic,
 		Partition:   0,
 		StartOffset: kafka.LastOffset,
@@ -98,7 +98,7 @@ func readFromKafka(topic string) []byte {
 
 func triggerKafkaEvent(topic string) {
 	w := &kafka.Writer{
-		Addr:                   kafka.TCP("localhost:9092"),
+		Addr:                   kafka.TCP("172.19.255.200:9092"),
 		Topic:                  topic,
 		AllowAutoTopicCreation: true,
 	}
